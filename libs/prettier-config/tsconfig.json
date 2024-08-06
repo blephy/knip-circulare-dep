@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "include": ["."],
+  "exclude": [
+    "**/node_modules/**",
+    "**/docs/**",
+    "**/documentations/**",
+    "**/reports/**",
+    "**/coverage/**",
+    "**/build/**",
+    "**/dist/**",
+    "**/lib/**"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "name": "eslint-config",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.cjs",
+      "require": "./src/index.cjs"
+    },
+    "./ignores": {
+      "default": "./src/ignores.cjs",
+      "require": "./src/ignores.cjs"
+    }
+  },
+  "main": "./src/index.cjs",
+  "module": "./src/index.cjs",
+  "files": [
+    "src/**/*"
+  ],
+  "scripts": {
+    "clean": "rm -rfv reports dist .eslintcache .stryker-tmp",
+    "format": "pnpm format:fix",
+    "format:ci": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "lint": "pnpm lint:fix",
+    "lint:ci": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "prettier": "prettier-config",
+  "dependencies": {
+    "eslint-config-prettier": "^9.0.0"
+  },
+  "devDependencies": {
+    "prettier-config": "workspace:*",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.2",
+    "typescript": "^5.5.4"
+  },
+  "peerDependencies": {
+    "eslint": "^8.57.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "nx": {
+    "tags": [
+      "type:config"
+    ]
+  }
+}

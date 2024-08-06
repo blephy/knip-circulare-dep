@@ -1,0 +1,44 @@
+{
+  "name": "prettier-config",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./index.mjs",
+      "import": "./index.mjs"
+    }
+  },
+  "main": "./index.mjs",
+  "module": "./index.mjs",
+  "files": [
+    "./index.mjs"
+  ],
+  "scripts": {
+    "clean": "rm -rfv reports dist .eslintcache .stryker-tmp",
+    "format": "pnpm format:fix",
+    "format:ci": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "lint": "pnpm lint:fix",
+    "lint:ci": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "prettier": "./index.mjs",
+  "devDependencies": {
+    "eslint-config": "workspace:*",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.2",
+    "typescript": "^5.5.4"
+  },
+  "peerDependencies": {
+    "prettier": "^3.2.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "nx": {
+    "tags": [
+      "type:config"
+    ]
+  }
+}
