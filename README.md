@@ -1,6 +1,6 @@
 # knip-circulare-dep
 
-A repository to reproduce knip bug
+A repository to reproduce knip bug https://github.com/webpro-nl/knip/issues/749
 
 ## installation
 
